@@ -1,8 +1,14 @@
 export const colors = {
-    transparent: 'transparent',
-    dark: 'black',
-
     primary: '#F16D1A',
+
+    light: '#FFFFFF',
+
+    dark900: '#111111',
+    dark500: '#121214',
+    dark400: '#171717',
+    dark300: '#1E1E1E',
+    dark200: '#9AA0A6',
+    dark100: '#E9E9E9',
 }
 
 export type ColorVariantsTypes = keyof typeof colors
