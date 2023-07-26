@@ -1,6 +1,8 @@
 export const colors = {
     transparent: 'transparent',
     dark: 'black',
+
+    primary: '#F16D1A',
 }
 
 export type ColorVariantsTypes = keyof typeof colors

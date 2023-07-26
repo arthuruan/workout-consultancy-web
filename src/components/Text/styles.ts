@@ -11,33 +11,34 @@ export interface StyledColorProps {
 export const Heading1 = styled.h1<StyledColorProps>`
     color: ${({ theme, color }) => theme.colors[color]};
     font-style: normal;
-    font-weight: normal;
-    font-size: 55px;
+    font-weight: 800;
+    font-size: 48px;
     line-height: 66px;
 `
 
 export const Heading2 = styled.h2<StyledColorProps>`
     color: ${({ theme, color }) => theme.colors[color]};
     font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
+    font-weight: 600;
+    font-size: 40px;
     line-height: 30px;
 `
 
-export const BodyLight = styled.p<StyledColorProps>`
-    /* color: ${({ theme, color }) => theme.colors[color]}; */
-    font-family: Inter;
-    color: black;
+export const BodySemiBold = styled.p<StyledColorProps>`
+    color: ${({ theme, color }) => theme.colors[color]};
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
 `
 
-export const BodySemiBold = styled(BodyLight)`
-    font-weight: 600;
+export const BodyBold = styled(BodySemiBold)`
+    font-weight: 700;
 `
 
 export const Caption1 = styled.p<StyledColorProps>`
     color: ${({ theme, color }) => theme.colors[color]};
     font-style: normal;
-    font-weight: normal;
+    font-weight: 600;
     font-size: 13px;
     line-height: 16px;
 `
@@ -45,7 +46,7 @@ export const Caption1 = styled.p<StyledColorProps>`
 export const Caption2 = styled.label<StyledColorProps>`
     color: ${({ theme, color }) => theme.colors[color]};
     font-style: normal;
-    font-weight: normal;
+    font-weight: 700;
     font-size: 9px;
     line-height: 11px;
     text-transform: uppercase;

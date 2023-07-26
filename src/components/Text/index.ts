@@ -3,7 +3,7 @@ import {
     Heading2,
     Caption1,
     Caption2,
-    BodyLight,
+    BodyBold,
     BodySemiBold,
 } from './styles'
 
@@ -13,6 +13,6 @@ export default {
     Heading2,
     Caption1,
     Caption2,
-    BodyLight,
+    BodyBold,
     BodySemiBold,
 }
