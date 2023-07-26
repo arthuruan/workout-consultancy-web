@@ -20,8 +20,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@/StrengthUI": ["./src/components/index.ts"]
+      "@strengthUI": ["./src/components/index.ts"],
+      "@/*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

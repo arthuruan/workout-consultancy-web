@@ -2,8 +2,8 @@ export const colors = {
     primary: '#F16D1A',
 
     light: '#FFFFFF',
+    dark: '#111111',
 
-    dark900: '#111111',
     dark500: '#121214',
     dark400: '#171717',
     dark300: '#1E1E1E',
