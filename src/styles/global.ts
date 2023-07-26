@@ -1,20 +1,14 @@
-import { globalCss } from '.'
+import { createGlobalStyle } from 'styled-components'
 
-export const globalStyles = globalCss({
-    '*': {
-        margin: 0,
-        padding: 0,
-        boxSizing: 'border-box',
-    },
+export default createGlobalStyle`
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: 0;
+    }
 
-    body: {
-        // backgroundColor: '$gray900',
-        // color: '$gray100',
-        '-webkit-font-smoothing': 'antialiased',
-    },
-
-    'body, input, textarea, button': {
-        fontFamily: 'Inter',
-        fontWeight: 400,
-    },
-})
+    button, a {
+        cursor: pointer;
+    }
+`
