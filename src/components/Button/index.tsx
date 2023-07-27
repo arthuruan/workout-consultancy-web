@@ -21,6 +21,11 @@ export default function Button({ children, variant, ...rest }: ButtonProps) {
     }
 
     switch (variant) {
+        case 'primary':
+            innerProps = {
+                color: 'primary',
+            }
+            break
         case 'light':
             innerProps = {
                 color: 'light',
@@ -36,7 +41,7 @@ export default function Button({ children, variant, ...rest }: ButtonProps) {
     }
 
     return (
-        <Container colorVariant={innerProps.color} {...rest}>
+        <Container variant={innerProps.color}>
             <Text.BodyBold color={innerProps.color}>{children}</Text.BodyBold>
         </Container>
     )

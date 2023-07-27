@@ -40,7 +40,7 @@ export const Caption1 = styled.p<StyledColorProps>`
     font-style: normal;
     font-weight: 600;
     font-size: 13px;
-    line-height: 16px;
+    line-height: 14px;
 `
 
 export const Caption2 = styled.label<StyledColorProps>`
@@ -49,5 +49,4 @@ export const Caption2 = styled.label<StyledColorProps>`
     font-weight: 700;
     font-size: 9px;
     line-height: 11px;
-    text-transform: uppercase;
 `
