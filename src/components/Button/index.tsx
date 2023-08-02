@@ -1,6 +1,5 @@
 import { ButtonHTMLAttributes } from 'react'
-import { Container } from './styles'
-import Text from '../Text'
+import * as S from './styles'
 import { ColorVariantsTypes } from '@/styles/theme'
 
 type Variants = 'primary' | 'light' | 'gray'
@@ -8,6 +7,7 @@ type Size = 'normal' | 'large'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: Variants
+    backgroundColor?: ColorVariantsTypes
     size?: Size
 }
 
@@ -15,7 +15,12 @@ type InnerProps = {
     color: ColorVariantsTypes
 }
 
-export default function Button({ children, variant, ...rest }: ButtonProps) {
+export default function Button({
+    children,
+    variant,
+    backgroundColor,
+    ...rest
+}: ButtonProps) {
     let innerProps: InnerProps = {
         color: 'primary',
     }
@@ -41,8 +46,12 @@ export default function Button({ children, variant, ...rest }: ButtonProps) {
     }
 
     return (
-        <Container variant={innerProps.color}>
-            <Text.BodyBold color={innerProps.color}>{children}</Text.BodyBold>
-        </Container>
+        <S.Button
+            variant={innerProps.color}
+            backgroundColor={backgroundColor}
+            {...rest}
+        >
+            {children}
+        </S.Button>
     )
 }

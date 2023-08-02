@@ -20,11 +20,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className={inter.className}>
-            <body
-                style={{
-                    backgroundColor: '#101010',
-                }}
-            >
+            <body>
                 <StyledComponentsRegistry>
                     <Providers>{children}</Providers>
                 </StyledComponentsRegistry>

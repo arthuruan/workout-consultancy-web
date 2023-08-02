@@ -1,15 +1,17 @@
 'use client'
 
 import { ColorVariantsTypes } from '@/styles/theme'
-import { styled } from 'styled-components'
+import styled from 'styled-components'
 
 export interface StyledColorProps {
     variant: ColorVariantsTypes
+    backgroundColor?: ColorVariantsTypes
 }
 
-export const Container = styled.button<StyledColorProps>`
-    background-color: transparent;
-    padding: 14px 18px;
+export const Button = styled.button<StyledColorProps>`
+    background-color: ${({ theme, backgroundColor }) =>
+        theme.colors[backgroundColor || 'dark500']};
+    padding: 0 18px;
 
     border: 3px solid ${({ theme, variant }) => theme.colors[variant]};
     border-radius: 14px;
@@ -19,6 +21,17 @@ export const Container = styled.button<StyledColorProps>`
     text-transform: uppercase;
     color: ${({ theme, variant }) => theme.colors[variant]};
 
-    height: fit-content;
-    width: fit-content;
+    height: 3.7rem;
+    width: 100%;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 0.7;
+    }
 `

@@ -1,7 +1,7 @@
 export const colors = {
     primary: '#F16D1A',
 
-    red: 'red',
+    red: '#FD4A4A',
 
     light: '#FFFFFF',
     dark: '#111111',

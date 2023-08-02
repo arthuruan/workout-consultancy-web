@@ -1,22 +1,38 @@
 import { InputHTMLAttributes } from 'react'
-import Text from '../Text'
-import { Container, Error } from './styles'
+import * as S from './styles'
+import { ColorVariantsTypes } from '@/styles/theme'
 
 interface InpurSearchProps extends InputHTMLAttributes<HTMLInputElement> {
-    label?: string
+    label: string
     value?: string
     error?: string
+    variant: ColorVariantsTypes // TODO: change this
+    backgroundColor: ColorVariantsTypes
     onValueChange?: (text: string) => void
     onInputFocus?: () => void
     onInputBlur?: () => void
 }
 
-export default function Input({ label, error, ...rest }: InpurSearchProps) {
+export default function Input({
+    variant,
+    backgroundColor,
+    label,
+    error,
+    ...rest
+}: InpurSearchProps) {
     return (
-        <Container>
-            {label && <Text.Caption1 color="light">{label}</Text.Caption1>}
-            <input {...rest} type="text" />
-            {error && <Error color="red">{label}</Error>}
-        </Container>
+        <S.Container name={label}>
+            <S.Label variant={variant} backgroundColor={backgroundColor}>
+                {label}
+            </S.Label>
+            <S.Control asChild>
+                <S.Input
+                    {...rest}
+                    backgroundColor={backgroundColor}
+                    variant={variant}
+                />
+            </S.Control>
+            <S.Error match="valueMissing">{error}</S.Error>
+        </S.Container>
     )
 }

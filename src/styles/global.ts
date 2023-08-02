@@ -8,6 +8,17 @@ export default createGlobalStyle`
         outline: 0;
     }
 
+    html {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+        background-color: #101010;
+    }
+
     button, a {
         cursor: pointer;
     }

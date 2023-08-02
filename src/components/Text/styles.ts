@@ -39,7 +39,7 @@ export const Caption1 = styled.p<StyledColorProps>`
     color: ${({ theme, color }) => theme.colors[color]};
     font-style: normal;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 14px;
 `
 
