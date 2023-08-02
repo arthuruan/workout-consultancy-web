@@ -10,7 +10,7 @@ export const Container = styled.main`
 
 export const Wrapper = styled.div`
     background-color: ${({ theme }) => theme.colors.light};
-    width: 50%;
+    width: 45%;
 
     padding: 0 60px;
 
@@ -20,5 +20,5 @@ export const Wrapper = styled.div`
 `
 
 export const FormContainer = styled(Form.Root)`
-    width: 50%;
+    width: 70%;
 `

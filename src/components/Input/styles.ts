@@ -14,7 +14,7 @@ export const Container = styled(Form.Field)`
 
     display: flex;
     flex-direction: column;
-    margin-bottom: 8px;
+    margin-bottom: 24px;
     position: relative;
 `
 
@@ -25,7 +25,7 @@ export const Input = styled.input<VariantProps>`
     padding: 0 20px;
     height: 3.7rem;
 
-    border: 3px solid ${({ theme, variant }) => theme.colors[variant]};
+    border: 3.5px solid ${({ theme, variant }) => theme.colors[variant]};
     border-radius: 14px;
 
     box-shadow: 6px 6px 0px 0px ${({ theme, variant }) => theme.colors[variant]};

@@ -13,7 +13,7 @@ export const Button = styled.button<StyledColorProps>`
         theme.colors[backgroundColor || 'dark500']};
     padding: 0 18px;
 
-    border: 3px solid ${({ theme, variant }) => theme.colors[variant]};
+    border: 3.5px solid ${({ theme, variant }) => theme.colors[variant]};
     border-radius: 14px;
 
     box-shadow: 6px 6px 0px 0px ${({ theme, variant }) => theme.colors[variant]};
@@ -27,11 +27,12 @@ export const Button = styled.button<StyledColorProps>`
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
 
     transition: 0.3s;
 
     &:hover {
-        opacity: 0.7;
+        opacity: 0.8;
     }
 `
