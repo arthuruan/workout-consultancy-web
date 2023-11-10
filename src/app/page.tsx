@@ -1,43 +1,57 @@
 'use client'
 
-import { Text, Input, Button, Form } from '@strengthUI'
+import { Input, Button, Form } from '@strengthUI'
 import * as S from './styles'
+import Image from 'next/image'
+import LogoImage from '../assets/logo-1.png'
 
 export default function Home() {
     return (
         <S.Container>
             <S.Wrapper>
-                <Text.Heading1 color="dark200">Rafael Agair</Text.Heading1>
-
-                <S.FormContainer
-                    onSubmit={(event) => {
-                        event.preventDefault()
-                    }}
-                >
-                    <Input
-                        label="Email"
-                        variant="dark"
-                        backgroundColor="light"
+                <S.WrapperForm>
+                    <Image
+                        src={LogoImage.src}
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: '80%', height: 'auto' }}
+                        alt="logo-1"
                     />
-                    <Input
-                        label="Password"
-                        variant="dark"
-                        backgroundColor="light"
-                        error="Mensagem de erro"
-                        type="password"
-                    />
-                    <Form.Submit asChild>
-                        <Button
-                            style={{
-                                marginTop: 80,
-                            }}
-                            variant="primary"
+                    <Form.Root
+                        onSubmit={(event) => {
+                            event.preventDefault()
+                        }}
+                        style={{
+                            width: '100%',
+                            marginTop: 10,
+                        }}
+                    >
+                        <Input
+                            label="Email"
+                            variant="dark"
                             backgroundColor="light"
-                        >
-                            Entrar
-                        </Button>
-                    </Form.Submit>
-                </S.FormContainer>
+                        />
+                        <Input
+                            label="Password"
+                            variant="dark"
+                            backgroundColor="light"
+                            error="Mensagem de erro"
+                            type="password"
+                        />
+                        <Form.Submit asChild>
+                            <Button
+                                style={{
+                                    marginTop: 80,
+                                }}
+                                variant="primary"
+                                backgroundColor="light"
+                            >
+                                Entrar
+                            </Button>
+                        </Form.Submit>
+                    </Form.Root>
+                </S.WrapperForm>
             </S.Wrapper>
         </S.Container>
     )
