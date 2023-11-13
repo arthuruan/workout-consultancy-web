@@ -20,21 +20,26 @@ export const Container = styled(Form.Field)`
 
 export const Control = styled(Form.Control)``
 
-export const Input = styled.input<VariantProps>`
-    background: none;
+export const InputContainer = styled.div<VariantProps>`
     padding: 0 20px;
-    height: 3.7rem;
-
     border: 3.5px solid ${({ theme, variant }) => theme.colors[variant]};
     border-radius: 14px;
 
     box-shadow: 6px 6px 0px 0px ${({ theme, variant }) => theme.colors[variant]};
 
+    display: flex;
+`
+
+export const Input = styled.input<VariantProps>`
+    border: 0;
+    height: 3.7rem;
+    width: 100%;
+
     color: ${({ theme, variant }) => theme.colors[variant]};
     background-color: ${({ theme, backgroundColor }) =>
         theme.colors[backgroundColor]};
 
-    font-size: 16px;
+    font-size: 18px;
 `
 
 export const Label = styled(Form.Label)<VariantProps>`
@@ -58,4 +63,13 @@ export const Error = styled(Form.Message)`
     font-size: 12px;
     font-weight: 500;
     color: ${({ theme }) => theme.colors.red};
+`
+
+export const Button = styled.button`
+    border: 0;
+    background: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `

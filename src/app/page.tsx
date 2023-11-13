@@ -1,9 +1,10 @@
 'use client'
 
-import { Input, Button, Form } from '@strengthUI'
+import { InputForm, Form } from '@strengthUI'
 import * as S from './styles'
 import Image from 'next/image'
 import LogoImage from '../assets/logo-1.png'
+import ArrowFowardIcon from '../assets/icons/arrow-forward.svg'
 
 export default function Home() {
     return (
@@ -15,7 +16,7 @@ export default function Home() {
                         width={0}
                         height={0}
                         sizes="100vw"
-                        style={{ width: '80%', height: 'auto' }}
+                        style={{ width: '100%', height: 'auto' }}
                         alt="logo-1"
                     />
                     <Form.Root
@@ -24,23 +25,22 @@ export default function Home() {
                         }}
                         style={{
                             width: '100%',
-                            marginTop: 10,
                         }}
                     >
-                        <Input
+                        <InputForm
                             label="Email"
                             variant="dark"
                             backgroundColor="light"
                         />
-                        <Input
+                        <InputForm
                             label="Password"
                             variant="dark"
                             backgroundColor="light"
                             error="Mensagem de erro"
-                            type="password"
+                            usePassword
                         />
                         <Form.Submit asChild>
-                            <Button
+                            <S.Button
                                 style={{
                                     marginTop: 80,
                                 }}
@@ -48,7 +48,8 @@ export default function Home() {
                                 backgroundColor="light"
                             >
                                 Entrar
-                            </Button>
+                                <ArrowFowardIcon />
+                            </S.Button>
                         </Form.Submit>
                     </Form.Root>
                 </S.WrapperForm>

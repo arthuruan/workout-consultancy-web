@@ -26,7 +26,7 @@ export const Button = styled.button<StyledColorProps>`
 
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     display: flex;
     align-items: center;
 

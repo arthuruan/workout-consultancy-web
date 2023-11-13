@@ -1,6 +1,7 @@
 'use client'
 
 import { styled } from 'styled-components'
+import { Button as UIButton } from '@strengthUI'
 
 export const Container = styled.main`
     display: flex;
@@ -23,4 +24,12 @@ export const WrapperForm = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+`
+
+export const Button = styled(UIButton)`
+    margin-top: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `
