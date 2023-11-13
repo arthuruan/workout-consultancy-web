@@ -3,8 +3,8 @@
 import { InputForm, Form } from '@strengthUI'
 import * as S from './styles'
 import Image from 'next/image'
-import LogoImage from '../assets/logo-1.png'
-import ArrowFowardIcon from '../assets/icons/arrow-forward.svg'
+import LogoImage from '@/assets/logo-1.png'
+import ArrowFowardIcon from '@/assets/icons/arrow-forward.svg'
 
 export default function Home() {
     return (

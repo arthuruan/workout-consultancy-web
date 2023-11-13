@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
 import StyledComponentsRegistry from '@/register'
-import { Providers } from './providers'
+import { Providers } from './(root)/providers'
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
@@ -9,7 +9,7 @@ const inter = Inter({
 })
 
 export const metadata = {
-    title: 'Rafael Agiar',
+    title: 'Rafael Aguiar',
     description: 'Consultoria de Treino Online',
 }
 
